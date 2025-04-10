@@ -499,3 +499,302 @@ h2 {
 .span-two {
     grid-column: span 2;
 }
+/* BMI Calculator Styles */
+.bmi-calculator {
+    background-color: var(--accent);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--muted-foreground);
+}
+
+input[type="number"],
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    background-color: var(--muted);
+    border: 1px solid var(--border);
+    color: var(--foreground);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--foreground);
+}
+
+/* Password Generator Styles */
+.password-generator {
+    background-color: var(--accent);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.password-display {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#password-output {
+    flex: 1;
+    padding: 0.75rem;
+    background-color: var(--muted);
+    border: 1px solid var(--border);
+    color: var(--foreground);
+    border-radius: 8px;
+    font-family: monospace;
+}
+
+.options {
+    margin-bottom: 1.5rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.option label {
+    margin-bottom: 0;
+    color: var(--foreground);
+}
+
+/* Captcha Styles */
+.captcha-container {
+    background-color: var(--accent);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.captcha-display {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#captcha-canvas {
+    background-color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#captcha-input {
+    flex: 1;
+    padding: 0.75rem;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    color: var(--foreground);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#captcha-input::placeholder {
+    color: var(--muted-foreground);
+}
+
+/* Result Styles */
+.result {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background-color: var(--muted);
+    border-radius: 8px;
+    color: var(--foreground);
+    font-weight: 500;
+    display: none;
+}
+
+.result.show {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .utilities-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.25rem;
+        padding: 0 0.5rem;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .utilities-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .utility-card {
+        padding: 1.5rem;
+    }
+
+    .utility-icon {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 0 1rem;
+    }
+
+    .calculator-grid {
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .calculator-grid button {
+        padding: 0.875rem;
+        font-size: 1rem;
+    }
+
+    .bmi-calculator,
+    .password-generator,
+    .captcha-container {
+        padding: 1.5rem;
+    }
+
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .back-btn {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.75rem;
+    }
+
+    .hero-section {
+        padding: 1.5rem 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .utilities-grid {
+        grid-template-columns: 1fr;
+        gap: 0.875rem;
+        padding: 0 0.5rem;
+    }
+
+    .utility-card {
+        padding: 1.25rem;
+    }
+
+    .section {
+        padding: 0 0.5rem;
+    }
+
+    .bmi-calculator,
+    .password-generator,
+    .captcha-container {
+        padding: 1rem;
+    }
+
+    .password-display {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    #copy-password {
+        width: 100%;
+    }
+
+    .calculator-grid {
+        gap: 0.35rem;
+        padding: 0.75rem;
+    }
+
+    .calculator-grid button {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .back-btn {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .utility-card {
+        padding: 1rem;
+    }
+
+    .utility-icon {
+        font-size: 1.75rem;
+    }
+}
