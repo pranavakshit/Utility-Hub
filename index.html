@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="snow-container">
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+    </div>
+
+    <main class="app-container">
+        <div class="hero-section">
+            <h1 class="hero-title">Utility Hub</h1>
+            <p class="hero-subtitle">Essential tools for everyday tasks</p>
+        </div>
+
+        <div class="utilities-grid">
+            <button class="utility-card" data-section="calculator">
+                <div class="utility-icon">🔢</div>
+                <h3>Calculator</h3>
+                <p>Perform quick calculations with ease</p>
+            </button>
+
+            <button class="utility-card" data-section="bmi">
+                <div class="utility-icon">⚖️</div>
+                <h3>BMI Calculator</h3>
+                <p>Check your Body Mass Index</p>
+            </button>
+
+            <button class="utility-card" data-section="password">
+                <div class="utility-icon">🔐</div>
+                <h3>Password Generator</h3>
+                <p>Create secure passwords instantly</p>
+            </button>
+
+            <button class="utility-card" data-section="captcha">
+                <div class="utility-icon">🔒</div>
+                <h3>Captcha</h3>
+                <p>Verify human interaction</p>
+            </button>
+        </div>
+
+        <div class="utility-content">
+            <!-- Calculator Section -->
+            <section id="calculator" class="section">
+                <div class="section-header">
+                    <h2>Calculator</h2>
+                    <button class="back-btn">← Back</button>
+                </div>
+                <div class="calculator-grid">
+                    <div class="output">
+                        <div class="previous-operand"></div>
+                        <div class="current-operand"></div>
+                    </div>
+                    <button class="span-two">AC</button>
+                    <button>DEL</button>
+                    <button>÷</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>×</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>-</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>+</button>
+                    <button>.</button>
+                    <button>0</button>
+                    <button class="span-two">=</button>
+                </div>
+            </section>
+
+            <!-- BMI Calculator Section -->
+            <section id="bmi" class="section">
+                <div class="section-header">
+                    <h2>BMI Calculator</h2>
+                    <button class="back-btn">← Back</button>
+                </div>
+                <div class="bmi-calculator">
+                    <div class="input-group">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" placeholder="Enter weight">
+                    </div>
+                    <div class="input-group">
+                        <label for="height">Height (cm)</label>
+                        <input type="number" id="height" placeholder="Enter height">
+                    </div>
+                    <button id="calculate-bmi">Calculate BMI</button>
+                    <div id="bmi-result" class="result"></div>
+                </div>
+            </section>
+
+            <!-- Password Generator Section -->
+            <section id="password" class="section">
+                <div class="section-header">
+                    <h2>Password Generator</h2>
+                    <button class="back-btn">← Back</button>
+                </div>
+                <div class="password-generator">
+                    <div class="password-display">
+                        <input type="text" id="password-output" readonly>
+                        <button id="copy-password">Copy</button>
+                    </div>
+                    <div class="options">
+                        <div class="option">
+                            <label>Password Length</label>
+                            <input type="number" id="password-length" value="12" min="8" max="32">
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="uppercase" checked>
+                            <label for="uppercase">Include Uppercase</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="lowercase" checked>
+                            <label for="lowercase">Include Lowercase</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="numbers" checked>
+                            <label for="numbers">Include Numbers</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="symbols" checked>
+                            <label for="symbols">Include Symbols</label>
+                        </div>
+                    </div>
+                    <button id="generate-password">Generate Password</button>
+                </div>
+            </section>
+
+            <!-- Captcha Section -->
+            <section id="captcha" class="section">
+                <div class="section-header">
+                    <h2>Captcha</h2>
+                    <button class="back-btn">← Back</button>
+                </div>
+                <div class="captcha-container">
+                    <div class="captcha-display">
+                        <canvas id="captcha-canvas"></canvas>
+                        <button id="refresh-captcha">↻</button>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="captcha-input" placeholder="Enter captcha">
+                        <button id="verify-captcha">Verify</button>
+                    </div>
+                    <div id="captcha-result" class="result"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
